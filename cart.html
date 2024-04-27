@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cava Web 3.0</title>
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <style>
+        .product-container,
+        .product-price-container,
+        .quanity-Products,
+        .total,
+        .completeTotal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-container div,
+        .product-price-container div,
+        .quanity-Products div,
+        .total div,
+        .completeTotal div {
+            margin: 0.5rem 0;
+        }
+
+        .products-header {
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <img class="w-full h-48 object-cover" src="./images/yg-beautiful.png" alt="Flower and sky" />
+            <div class="px-6 py-4 absolute left-0 top-0">
+                <ul>
+                    <div class="flex flex-row justify-between">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="cart">
+                            <a href="cart.html" class="smartCart">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 inline-block"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0zm-8 2a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg> Cart (<span>0</span>)
+                            </a>
+                        </li>
+                        <li><a href="payment.html">Checkout</a></li> <!-- Add this line for the payment button -->
+                    </div>
+                </ul>
+        </nav>
+    </header>
+
+    <div class="products max-w-fit flex justify-center m-0 my-2 ">
+        <div class="products-header w-full flex flex-row my-3  bg-gray-100 shadow-xl">
+            <h5 class="product-title mx-7 w-28">Products
+                <button onclick="removeMe()">x</button>
+                <div class="products-container"></div>
+            </h5>
+            <h5 id="product-list" class="bg-slate-500  product-price-container">Price</h5>
+            <div class="mr-10 quanity-Products">Quantity</div>
+            <h5 class="total mr-10">Sub Total</h5>
+            <div>
+                <h5>Total</h5>
+                $
+
+                <div class="completeTotal"></div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="redirectToPayment()"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Proceed to Payment</button>
+    <!-- Add this button for the payment -->
+
+    <script>
+        let products = [
+            {
+                name: "Mens T-Shirt",
+                price: 13,
+                inCart: 1,
+                tag: "product1.jpg"
+            },
+            {
+                name: "Slim Khaki Tousers",
+                price: 33,
+                inCart: 2,
+                tag: "product2.jpg"
+            },
+            {
+                name: "Nike Shoes",
+                price: 23,
+                inCart: 3,
+                tag: "product3.jpg",
+            },
+            {
+                name: "Wrist Watch",
+                price: 135,
+                inCart: 1,
+                tag: "product4.jpg",
+            },
+            {
+                name: "V Neck Tassel Cape",
+                price: 20,
+                inCart: 2,
+                tag: "wproduct1.jpg",
+            },
+            {
+                name: "Printed Wrap Dress",
+                price: 20,
+                inCart: 1,
+                tag: "wproduct2.jpg",
+            },
+            {
+                name: "Blue Denim Dress",
+                price: 35,
+                inCart: 3,
+                tag: "wproduct3.jpg",
+            },
+            {
+                name: "High Waist Denim Skirt",
+                price: 40,
+                inCart: 2,
+                tag: "wproduct4.jpg",
+            },
+        ];
+
+        let carts = document.querySelectorAll(".add-carts")
+        for (let i = 0; i < carts.length; i++) {
+            carts[i].addEventListener("click", () => {
+                cartNumbers(products[i]);
+                //totalCost(products[i])
+            })
+        }
+
+        function calculateTotalAndStore() {
+        let cartItems = localStorage.getItem("productsInCart");
+        cartItems = JSON.parse(cartItems);
+        let total = 0;
+
+        if (cartItems) {
+            Object.values(cartItems).forEach(item => {
+                total += item.price * item.inCart;
+            });
+        }
+
+        // Display total amount in UI
+        document.querySelector(".completeTotal").textContent = `$${total}.00`;
+
+        // Store total amount in local storage
+        localStorage.setItem("totalAmount", total);
+    }
+
+    // Function to load cart numbers and total amount when page loads
+    window.onload = function () {
+        onLoadCartNumbers();
+        calculateTotalAndStore();
+    };
+
+        function onLoadCartNumbers() {
+
+            let productNumbers = localStorage.getItem("cartNumbers")
+            if (productNumbers) {
+                document.querySelector(".smartCart span").textContent = productNumbers;
+            } else {
+                document.querySelector(".smartCart span").textContent = 0; // Set to 0 when cart is empty
+            }
+        }
+        function cartNumbers(product) {
+            console.log(product, "myname")
+            let productNumbers = localStorage.getItem("cartNumbers")
+            productNumbers = parseInt(productNumbers)
+
+            if (productNumbers) {
+                localStorage.setItem("cartNumbers", productNumbers + 1)
+                document.querySelector(".smartCart span").textContent = productNumbers + 1
+            } else {
+                localStorage.setItem("cartNumbers", 1)
+                document.querySelector(".smartCart span").textContent = 1
+            }
+            setItems(product);
+            totalCost(product); // Call totalCost function here to update the total cost
+        }
+
+
+
+        function setItems(product) {
+            let cartItems = localStorage.getItem("productsInCart")
+            cartItems = JSON.parse(cartItems)
+
+            if (cartItems != null) {
+
+                if (cartItems[product.name] == undefined) {
+                    cartItems = {
+                        ...cartItems,
+                        [product.tag]: product
+                    }
+                }
+                cartItems[product.tag].inCart += 1
+            }
+            else {
+                product.inCart = 1
+                cartItems = {
+                    [product.tag]: product
+                }
+            }
+
+            localStorage.setItem("productsInCart", JSON.stringify(cartItems))
+        }
+
+        function totalCost(product) {
+            let cartCost = localStorage.getItem("totalCost")
+
+
+            if (cartCost != null) {
+                cartCost = parseInt(cartCost)
+                localStorage.setItem("totalCost", cartCost + product.price)
+            } else {
+                localStorage.setItem("totalCost", product.price)
+            }
+        }
+        function redirectToPayment() {
+            // Retrieve cart number and total amount from localStorage
+            const cartNumber = localStorage.getItem("cartNumbers");
+            const totalAmount = localStorage.getItem("totalCost");
+
+            // Construct the URL with query parameters
+            const paymentURL = `payment.html?cartNumber=${cartNumber}&totalAmount=${totalAmount}`;
+
+            // Redirect to the payment page with the query parameters
+            window.location.href = paymentURL;
+        }
+
+
+        function displayCart() {
+            let cartItems = localStorage.getItem("productsInCart")
+            cartItems = JSON.parse(cartItems)
+
+            let productContainer = document.querySelector(".products-container")
+            let priceProducts = document.querySelector(".product-price-container")
+            let quanityProducts = document.querySelector(".quanity-Products")
+            let total = document.querySelector(".total")
+            let completeTotal = document.querySelector(".completeTotal")
+            var sumOfProduct = 0
+
+            if (cartItems && productContainer && priceProducts && quanityProducts && total) {
+                productContainer.innerHTML = "";
+                priceProducts.innerHTML = "";
+                quanityProducts.innerHTML = "";
+                total.innerHTML = "";
+                completeTotal.innerHTML = "";
+
+                if (Object.keys(cartItems).length === 0) {
+                    // Cart is empty
+                    productContainer.innerHTML = "<p>Your cart is empty</p>";
+                    return;
+                }
+
+                Object.values(cartItems).forEach(item => {
+                    productContainer.innerHTML += `
+                    <div class="flex flex-row justify-around">
+                        <img id="tag-img" class="h-10 w-10 class="" src="./images/products/${item.tag}">
+                        <div id="name-span">${item.name}</div>
+                        <button onclick="removeItem('${item.tag}')">Delete</button>
+                    </div>`;
+                    priceProducts.innerHTML += `
+                    <div class="flex flex-row justify-around">
+                        <div id="price-span" class="mt-5 price">$${item.price}.00</div>
+                    </div>`;
+                    quanityProducts.innerHTML += `
+                    <div class="flex flex-row justify-around">
+                        <div  id="inCart-span"  class="mt-5 quanitity">${item.inCart}</div>
+                    </div>`;
+                    total.innerHTML += `
+                    <div class="flex flex-row justify-around">
+                        <div id="total-div" class="mt-5 total">$${item.inCart * item.price}.00</div>
+                    </div>`;
+
+                    sumOfProduct += item.price * item.inCart;
+                    completeTotal.innerHTML = sumOfProduct;
+                    console.log(sumOfProduct);
+                })
+            }
+        }
+
+        function removeItem(tag) {
+            let cartItems = localStorage.getItem("productsInCart");
+            cartItems = JSON.parse(cartItems);
+
+            if (cartItems[tag]) {
+                const itemPrice = cartItems[tag].price * cartItems[tag].inCart;
+                delete cartItems[tag];
+                localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+
+                // Update total cost
+                let totalCost = localStorage.getItem("totalCost");
+                totalCost = parseInt(totalCost) - itemPrice;
+                localStorage.setItem("totalCost", totalCost);
+
+                // Update cart numbers
+                let cartNumbers = localStorage.getItem("cartNumbers");
+                cartNumbers = parseInt(cartNumbers) - 1; // decrement by 1
+                localStorage.setItem("cartNumbers", cartNumbers);
+
+                // Refresh the cart display
+                displayCart();
+                onLoadCartNumbers();
+
+                // Check if cart is empty, if so, set cart number display to zero
+                if (Object.keys(cartItems).length === 0) {
+                    document.querySelector(".smartCart span").textContent = 0;
+                }
+            }
+        }
+
+        function redirectToPayment() {
+            window.location.href = "payment.html"; // Replace "payment.html" with the actual URL of your payment page
+        }
+
+        displayCart();
+        onLoadCartNumbers();
+    </script>
+
+</body>
+
+</html>

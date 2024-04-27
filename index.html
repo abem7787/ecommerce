@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CaVA Web 3.0</title>
+  <link rel="stylesheet" href="./css/tailwind.css" />
+</head>
+
+<body>
+  <div class="container mx-auto p-5">
+    <div class="md:flex md:flex-row md:justify-between text-center text-sm sm:text-base">
+      <div class="flex flex-row justify-center">
+        <!-- <div class="bg-gradient-to-r from-purple-400 to-red-400 w-10 h-10 rounded-lg"></div> -->
+        <h1 class="text-4xl text-red-400 ml-2">CaVa</h1>
+      </div>
+      <div class="mt-2">
+        <a href="#" class="text-gray-600 hover:text-purple-600 p-4 px-3 sm:px-4">Home</a>
+        <a href="#" class="text-gray-600 hover:text-purple-600 p-4 px-3 sm:px-4">Shop</a>
+        <a href="#" class="text-gray-600 hover:text-purple-600 p-4 px-3 sm:px-4">Blog</a>
+        <a href="#" class="text-gray-600 hover:text-purple-600 p-4 px-3 sm:px-4">Contact</a>
+        <a class="smartCart" href="cart.html"> <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 sm:h-6 sm:w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg> Cart (<span>0</span>)</a>
+        <a href="#" class="cart" class="bg-purple-600 text-gray-50 hover:bg-purple-700 p-3 px-3 sm:px-5 rounded-full">
+        </a>
+      </div>
+      <!-- Cart Selection-->
+
+
+    </div><!-- Main Navigation -->
+    <div class="md:flex md:flex-row mt-20">
+      <div class="md:w-2/5 flex flex-col justify-center items-center">
+        <h2 class="font-serif text-5xl text-gray-600 mb-4 text-center md:self-start md:text-left">Find Something Catchy
+          Here</h2>
+        <p class="uppercase text-gray-600 tracking-wide text-center md:self-start md:text-left">Our brand.</p>
+        <p class="uppercase text-gray-600 tracking-wide text-center md:self-start md:text-left">Our motto, is always
+          here to trend.</p>
+        <a href="#"
+          class="bg-gradient-to-r from-red-600 to-pink-500 rounded-full py-4 px-8 text-gray-50 uppercase text-xl md:self-start my-5">Shop
+          Now</a>
+      </div>
+      <div class="md:w-3/5">
+        <img src="./images/savant.jpg" id="mainPhoto" class="w-full" />
+      </div>
+    </div>
+    <!-- Hero sectioin -->
+    <script>
+      let images = ['./images/products/banner.jpg', './images/products/banner2.jpg', './images/products/banner3.jpg', './images/products/banner4.jpg', './images/products/savant.jpg'];
+      let index = 0;
+      const imgElement = document.getElementById('mainPhoto');
+      function change() {
+        imgElement.src = images[index];
+        index > 1 ? index = 0 : index++;
+      }
+
+      window.onload = function () {
+        setInterval(change, 3000);
+      };
+
+    </script>
+    <div class="my-20">
+      <div class="flex flex-row justify-between my-5">
+        <h2 class="text-3xl">Men's Selection</h2>
+        <a href="#" class="flex flex-row text-lg hover:text-purple-700">
+          View All
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-5 ml-1" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+
+
+
+      <div class="grid grid-flow-row grid-cols-1 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+       
+        <div class="shadow-lg rounded-l py-3 transform transition hover:bg-indigo-50 hover:-translate-y-0.5 text-sm">
+          <a href="#">
+            <img src="./images/products/product1.jpg" class=" image rounded-tl-lg rounded-tr-lg" />
+          </a>
+          <div class="p-5">
+
+
+            <div class="flex flex-column justify-between">
+              <h3><a href="#">Mens T-Shirt</a> </h3>
+              <div>Price <a class="price">$23</a></div>
+
+            </div>
+
+            <div class="flex flex-row my-3">
+              <div class="bg-black rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-blue-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-white rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-red-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-green-700 rounded-full h-5 w-5 shadow-md mr-2"></div>
+            </div>
+            <div class="flex flex-row my-3">
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XL</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XXL</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">L</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">M</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">S</a>
+            </div>
+            <div class="flex flex-col xl:flex-row justify-between">
+              <a
+                class="cursor-pointer add-carts cart1 bg-gradient-to-r from-red-600 to-pink-500 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-pink-600 hover:from-pink-600 hover:to-pink-600 flex flex-row justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                Add to cart
+              </a>
+              <a id="myBtn"
+                class="cursor-pointer bg-purple-600 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-purple-700 flex flex-row justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+                View Details
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <div id="myModal-Tshirt"
+          class="modal-Tshirt flex bg-gradient-to-b flex-none absolute z-50 mt-96 pt-96 left-0 top-0 w-96 h-64">
+
+          <div class="modal-content-Tshirt bg-red-50 shadow-md rounded-r-md mt-auto p-20 border-solid border-2">
+            <span class="close">&times</span>
+            <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg" href="#">Mens T-Shirt
+              </h3></a>
+
+            <div class="flex flex-row my-3">
+              <img src="./images/products/product1.jpg" class=" h-96 w-72 image rounded-tl-lg rounded-tr-lg" />
+              <a class="relative border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs mt-40"
+                href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius?
+                Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim
+                facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia
+                suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est
+                adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt
+                quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident
+                officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae,
+                tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos
+                repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis
+                similique?</a>
+
+            </div>
+            <div>Cost <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg">$23.00</a>
+            </div>
+            <p>Free 2 day Shipping</p>
+          </div>
+        </div>
+       
+
+        
+        <div class="shadow-lg rounded-lg py-3 transform transition hover:bg-indigo-50 hover:-translate-y-0.5 text-sm">
+          <a id="contactUs">
+            <img src="./images/products/product2.jpg" class="rounded-tl-lg rounded-tr-lg" />
+          </a>
+          <div class="p-5">
+            <div class="flex flex-column justify-between">
+              <h3><a href="#">Slim Cut Jeans</a> </h3>
+              <div>Price <a class="price">$35</a></div>
+            </div>
+            <div class="flex flex-row my-3">
+              <div class="bg-black rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-blue-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-white rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-red-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-green-700 rounded-full h-5 w-5 shadow-md mr-2"></div>
+            </div>
+            <div class="flex flex-row my-3">
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XL</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XXL</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">L</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">M</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">S</a>
+            </div>
+            <div class="flex flex-col xl:flex-row justify-between">
+              <a
+                class="cursor-pointer add-carts cart2 bg-gradient-to-r from-red-600 to-pink-500 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-pink-600 hover:from-pink-600 hover:to-pink-600 flex flex-row justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                Add to cart
+              </a>
+              <a> </a>
+              <a id="myBtn2"
+                class="cursor-pointer bg-purple-600 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-purple-700 flex flex-row justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+                View Details
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="myModal-SlimCutPants"
+        class="modal-Tshirt flex bg-gradient-to-b flex-none absolute z-50 mt-96 pt-96 left-0 top-0 w-96 h-64">
+
+        <div class="modal-content-SlimCutPants bg-red-50 shadow-md rounded-r-md mt-auto p-20 border-solid border-2">
+          <span class="close">&times</span>
+          
+          <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg" href="#">Slim Cut Jeans
+            </h3></a>
+
+          <div class="flex flex-row my-3">
+            <img src="./images/products/product2.jpg" class=" h-96 w-72 image rounded-tl-lg rounded-tr-lg" />
+            <a class="relative border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs mt-40"
+              href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius?
+              Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim
+              facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia
+              suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est
+              adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt
+              quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident
+              officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae,
+              tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos
+              repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis
+              similique?</a>
+
+          </div>
+          <div>Cost <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg">$120.00</a>
+          </div>
+          <p>Free 2 day Shipping</p>
+        </div>
+      </div>
+
+      
+      
+      <div class="shadow-lg rounded-l py-3 transform transition hover:bg-indigo-50 hover:-translate-y-0.5 text-sm">
+        <a href="#">
+          <img src="./images/products/product3.jpg" class=" image rounded-tl-lg rounded-tr-lg" />
+        </a>
+        <div class="p-5">
+
+
+          <div class="flex flex-column justify-between">
+            <h3><a href="#">AirForce Canvas</a> </h3>
+            <div>Price <a class="price">$120</a></div>
+
+          </div>
+
+          <div class="flex flex-row my-3">
+            <div class="bg-black rounded-full h-5 w-5 shadow-md mr-2"></div>
+            <div class="bg-blue-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+            <div class="bg-white rounded-full h-5 w-5 shadow-md mr-2"></div>
+            <div class="bg-red-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+            <div class="bg-green-700 rounded-full h-5 w-5 shadow-md mr-2"></div>
+          </div>
+          <div class="flex flex-row my-3">
+            <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XL</a>
+            <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XXL</a>
+            <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">L</a>
+            <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">M</a>
+            <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">S</a>
+          </div>
+          <div class="flex flex-col xl:flex-row justify-between">
+            <a
+              class="cursor-pointer add-carts cart1 bg-gradient-to-r from-red-600 to-pink-500 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-pink-600 hover:from-pink-600 hover:to-pink-600 flex flex-row justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              Add to cart
+            </a>
+            <a id="myBtn3"
+              class="cursor-pointer bg-purple-600 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-purple-700 flex flex-row justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+              View Details
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div id="myModal-AirForceShoes"
+        class="modal-Tshirt flex bg-gradient-to-b flex-none absolute z-50 mt-96 pt-96 left-0 top-0 w-96 h-64">
+
+        <div class="modal-content-Tshirt bg-red-50 shadow-md rounded-r-md mt-auto p-20 border-solid border-2">
+          <span class="close">&times</span>
+          <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg" href="#"> AirForce Canvas    </h3></a>
+
+          <div class="flex flex-row my-3">
+            <img src="./images/products/product3.jpg" class=" h-96 w-72 image rounded-tl-lg rounded-tr-lg" />
+            <a class="relative border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs mt-40"
+              href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius?
+              Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim
+              facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia
+              suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est
+              adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt
+              quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident
+              officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae,
+              tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos
+              repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis
+              similique?</a>
+
+          </div>
+          <div>Cost <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg">$120.00</a>
+          </div>
+          <p>Free 2 day Shipping</p>
+        </div>
+      </div>
+
+
+
+        <div class="shadow-lg rounded-l py-3 transform transition hover:bg-indigo-50 hover:-translate-y-0.5 text-sm">
+          <a href="#">
+            <img src="./images/products/product4.jpg" class=" image rounded-tl-lg rounded-tr-lg" />
+          </a>
+          <div class="p-5">
+
+
+            <div class="flex flex-column justify-between">
+              <h3><a href="#">Smart Watch V20 Classics</a> </h3>
+              <div>Price <a class="price">$435</a></div>
+
+            </div>
+
+            <div class="flex flex-row my-3">
+              <div class="bg-black rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-blue-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-white rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-red-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-green-700 rounded-full h-5 w-5 shadow-md mr-2"></div>
+            </div>
+            <div class="flex flex-row my-3">
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XL</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XXL</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">L</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">M</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">S</a>
+            </div>
+            <div class="flex flex-col xl:flex-row justify-between">
+              <a
+                class="cursor-pointer add-carts cart1 bg-gradient-to-r from-red-600 to-pink-500 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-pink-600 hover:from-pink-600 hover:to-pink-600 flex flex-row justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                Add to cart
+              </a>
+              <a id="myBtn4"
+                class="cursor-pointer bg-purple-600 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-purple-700 flex flex-row justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+                View Details
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <div id="myModal-SmartWatch"
+          class="modal-Tshirt flex bg-gradient-to-b flex-none absolute z-50 mt-96 pt-96 left-0 top-0 w-96 h-64">
+
+          <div class="modal-content-Tshirt bg-red-50 shadow-md rounded-r-md mt-auto p-20 border-solid border-2">
+            <span class="close">&times</span>
+            <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg" href="#">Smart Watch
+              </h3></a>
+
+            <div class="flex flex-row my-3">
+              <img src="./images/products/product4.jpg" class=" h-96 w-72 image rounded-tl-lg rounded-tr-lg" />
+              <a class="relative border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs mt-40"
+                href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius?
+                Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim
+                facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia
+                suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est
+                adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt
+                quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident
+                officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae,
+                tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos
+                repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis
+                similique?</a>
+
+            </div>
+            <div>Cost <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg">$435.00</a>
+            </div>
+            <p>Free 2 day Shipping</p>
+          </div>
+        </div>
+
+
+
+
+    </div> <!-- Men's Collection Section -->
+
+
+
+
+    
+    <div class="my-20">
+      <div class="flex flex-row justify-between my-5">
+        <h2 class="text-3xl">Women's Selection</h2>
+        <a href="#" class="flex flex-row text-lg hover:text-purple-700">
+          View All
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-5 ml-1" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-flow-row grid-cols-1 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+        <div class="shadow-lg rounded-l py-3 transform transition hover:bg-indigo-50 hover:-translate-y-0.5 text-sm">
+          <a href="#">
+            <img src="./images/products/wproduct1.jpg" class=" image rounded-tl-lg rounded-tr-lg" />
+          </a>
+          <div class="p-5">
+
+
+            <div class="flex flex-column justify-between">
+              <h3><a href="#">V Neck Tassel Cape</a> </h3>
+              <div>Price <a class="price">$65</a></div>
+
+            </div>
+
+            <div class="flex flex-row my-3">
+              <div class="bg-black rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-blue-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-white rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-red-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-green-700 rounded-full h-5 w-5 shadow-md mr-2"></div>
+            </div>
+            <div class="flex flex-row my-3">
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XL</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XXL</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">L</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">M</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">S</a>
+            </div>
+            <div class="flex flex-col xl:flex-row justify-between">
+              <a
+                class="cursor-pointer add-carts cart1 bg-gradient-to-r from-red-600 to-pink-500 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-pink-600 hover:from-pink-600 hover:to-pink-600 flex flex-row justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                Add to cart
+              </a>
+              <a id="myBtn5"
+                class="cursor-pointer bg-purple-600 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-purple-700 flex flex-row justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+                View Details
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <div id="myModal-Vdress"
+          class="modal-Tshirt flex bg-gradient-to-b flex-none absolute z-50 mt-96 pt-96 left-0 top-0 w-96 h-64">
+
+          <div class="modal-content-Tshirt bg-red-50 shadow-md rounded-r-md mt-auto p-20 border-solid border-2">
+            <span class="close">&times</span>
+            <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg" href="#">V Neck Tassel Cape
+              </h3></a>
+
+            <div class="flex flex-row my-3">
+              <img src="./images/products/wproduct1.jpg" class=" h-96 w-72 image rounded-tl-lg rounded-tr-lg" />
+              <a class="relative border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs mt-40"
+                href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius?
+                Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim
+                facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia
+                suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est
+                adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt
+                quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident
+                officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae,
+                tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos
+                repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis
+                similique?</a>
+
+            </div>
+            <div>Cost <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg">$65.00</a>
+            </div>
+            <p>Free 2 day Shipping</p>
+          </div>
+        </div>
+       
+
+
+        <div class="shadow-lg rounded-l py-3 transform transition hover:bg-indigo-50 hover:-translate-y-0.5 text-sm">
+          <a href="#">
+            <img src="./images/products/wproduct2.jpg" class=" image rounded-tl-lg rounded-tr-lg" />
+          </a>
+          <div class="p-5">
+
+
+            <div class="flex flex-column justify-between">
+              <h3><a href="#">Wrapped Dress Shoes</a> </h3>
+              <div>Price <a class="price">$65</a></div>
+
+            </div>
+
+            <div class="flex flex-row my-3">
+              <div class="bg-black rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-blue-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-white rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-red-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+              <div class="bg-green-700 rounded-full h-5 w-5 shadow-md mr-2"></div>
+            </div>
+            <div class="flex flex-row my-3">
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XL</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XXL</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">L</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">M</a>
+              <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">S</a>
+            </div>
+            <div class="flex flex-col xl:flex-row justify-between">
+              <a
+                class="cursor-pointer add-carts cart1 bg-gradient-to-r from-red-600 to-pink-500 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-pink-600 hover:from-pink-600 hover:to-pink-600 flex flex-row justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                Add to cart
+              </a>
+              <a id="myBtn6"
+                class="cursor-pointer bg-purple-600 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-purple-700 flex flex-row justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+                View Details
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <div id="myModal-myWrappedShoes"
+          class="modal-Tshirt flex bg-gradient-to-b flex-none absolute z-50 mt-96 pt-96 left-0 top-0 w-96 h-64">
+
+          <div class="modal-content-Tshirt bg-red-50 shadow-md rounded-r-md mt-auto p-20 border-solid border-2">
+            <span class="close">&times</span>
+            <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg" href="#"> Wrapped Dress Shoes
+              </h3></a>
+
+            <div class="flex flex-row my-3">
+              <img src="./images/products/wproduct2.jpg" class=" h-96 w-72 image rounded-tl-lg rounded-tr-lg" />
+              <a class="relative border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs mt-40"
+                href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius?
+                Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim
+                facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia
+                suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est
+                adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt
+                quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident
+                officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae,
+                tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos
+                repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis
+                similique?</a>
+
+            </div>
+            <div>Cost <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg">$65.00</a>
+            </div>
+            <p>Free 2 day Shipping</p>
+          </div>
+        </div>
+
+<div class="shadow-lg rounded-l py-3 transform transition hover:bg-indigo-50 hover:-translate-y-0.5 text-sm">
+  <a href="#">
+    <img src="./images/products/wproduct3.jpg" class=" image rounded-tl-lg rounded-tr-lg" />
+  </a>
+  <div class="p-5">
+
+
+    <div class="flex flex-column justify-between">
+      <h3><a href="#">Blue Denuim Dress</a> </h3>
+      <div>Price <a class="price">$85</a></div>
+
+    </div>
+
+    <div class="flex flex-row my-3">
+      <div class="bg-black rounded-full h-5 w-5 shadow-md mr-2"></div>
+      <div class="bg-blue-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+      <div class="bg-white rounded-full h-5 w-5 shadow-md mr-2"></div>
+      <div class="bg-red-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+      <div class="bg-green-700 rounded-full h-5 w-5 shadow-md mr-2"></div>
+    </div>
+    <div class="flex flex-row my-3">
+      <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XL</a>
+      <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XXL</a>
+      <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">L</a>
+      <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">M</a>
+      <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">S</a>
+    </div>
+    <div class="flex flex-col xl:flex-row justify-between">
+      <a
+        class="cursor-pointer add-carts cart1 bg-gradient-to-r from-red-600 to-pink-500 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-pink-600 hover:from-pink-600 hover:to-pink-600 flex flex-row justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+        Add to cart
+      </a>
+      <a id="myBtn7"
+        class="cursor-pointer bg-purple-600 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-purple-700 flex flex-row justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+            clip-rule="evenodd" />
+        </svg>
+        View Details
+      </a>
+
+    </div>
+  </div>
+</div>
+<div id="myModal-myBlueDenuim"
+  class="modal-Tshirt flex bg-gradient-to-b flex-none absolute z-50 mt-96 pt-96 left-0 top-0 w-96 h-64">
+
+  <div class="modal-content-Tshirt bg-red-50 shadow-md rounded-r-md mt-auto p-20 border-solid border-2">
+    <span class="close">&times</span>
+    <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg" href="#"> Blue Denuim Dress Shoes
+      </h3></a>
+
+    <div class="flex flex-row my-3">
+      <img src="./images/products/wproduct3.jpg" class=" h-96 w-72 image rounded-tl-lg rounded-tr-lg" />
+      <a class="relative border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs mt-40"
+        href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius?
+        Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim
+        facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia
+        suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est
+        adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt
+        quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident
+        officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae,
+        tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos
+        repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis
+        similique?</a>
+
+    </div>
+    <div>Cost <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg">$ 85.00</a>
+    </div>
+    <p>Free 2 day Shipping</p>
+  </div>
+</div>
+        
+
+
+
+
+<div class="shadow-lg rounded-l py-3 transform transition hover:bg-indigo-50 hover:-translate-y-0.5 text-sm">
+  <a href="#">
+    <img src="./images/products/wproduct4.jpg" class=" image rounded-tl-lg rounded-tr-lg" />
+  </a>
+  <div class="p-5">
+
+
+    <div class="flex flex-column justify-between">
+      <h3><a href="#">Low Printed Dress</a> </h3>
+      <div>Price <a class="price">$85</a></div>
+
+    </div>
+
+    <div class="flex flex-row my-3">
+      <div class="bg-black rounded-full h-5 w-5 shadow-md mr-2"></div>
+      <div class="bg-blue-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+      <div class="bg-white rounded-full h-5 w-5 shadow-md mr-2"></div>
+      <div class="bg-red-800 rounded-full h-5 w-5 shadow-md mr-2"></div>
+      <div class="bg-green-700 rounded-full h-5 w-5 shadow-md mr-2"></div>
+    </div>
+    <div class="flex flex-row my-3">
+      <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XL</a>
+      <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">XXL</a>
+      <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">L</a>
+      <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">M</a>
+      <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs" href="#">S</a>
+    </div>
+    <div class="flex flex-col xl:flex-row justify-between">
+      <a
+        class="cursor-pointer add-carts cart1 bg-gradient-to-r from-red-600 to-pink-500 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-pink-600 hover:from-pink-600 hover:to-pink-600 flex flex-row justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+        Add to cart
+      </a>
+      <a id="myBtn8"
+        class="cursor-pointer bg-purple-600 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-purple-700 flex flex-row justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+            clip-rule="evenodd" />
+        </svg>
+        View Details
+      </a>
+
+    </div>
+  </div>
+</div>
+<div id="lowPrintedDress"
+  class="modal-Tshirt flex bg-gradient-to-b flex-none absolute z-50 mt-96 pt-96 left-0 top-0 w-96 h-64">
+  <h3><a href="#">Low Printed Dress</a> </h3>
+  <div>Price <a class="price">$110</a></div>
+  <div class="modal-content-Tshirt bg-red-50 shadow-md rounded-r-md mt-auto p-20 border-solid border-2">
+    <span class="close">&times</span>
+    <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg" href="#"> Low Printed Dress
+      </h3></a>
+
+    <div class="flex flex-row my-3">
+      <img src="./images/products/wproduct4.jpg" class=" h-96 w-72 image rounded-tl-lg rounded-tr-lg" />
+      <a class="relative border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs mt-40"
+        href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius?
+        Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim
+        facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia
+        suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt quas nulla eaque est
+        adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident officia, deserunt
+        quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae, tempora provident
+        officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos repudiandae,
+        tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis similique? Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Impedit harum mollitia suscipit eius? Id dignissimos
+        repudiandae, tempora provident officia, deserunt quas nulla eaque est adipisci ad enim facilis nobis
+        similique?</a>
+
+    </div>
+    <div>Cost <a class="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-lg">$ 85.00</a>
+    </div>
+    <p>Free 2 day Shipping</p>
+  </div>
+</div>
+              
+    </div> <!-- Women's Collection Section -->
+
+
+<!--Electronics-->
+
+
+
+
+
+
+
+
+
+    <div class="rounded-lg shadow-lg my-20 flex flex-row">
+      <div
+        class="lg:w-3/5 w-full bg-gradient-to-r from-black to-purple-900 lg:from-black lg:via-purple-900 lg:to-transparent rounded-lg text-gray-100 p-12">
+        <div class="lg:w-1/2">
+          <h3 class="text-2xl font-extrabold mb-4">Subscribe to get our offers first</h3>
+          <p class="mb-4 leading-relaxed">Want to hear from us when we have new offers? Sign up for our newsletter and
+            we'll email you every time we have new sale offers.</p>
+          <div>
+            <input type="email" placeholder="Enter email address"
+              class="bg-gray-600 text-gray-200 placeholder-gray-400 px-4 py-3 w-full rounded-lg focus:outline-none mb-4" />
+            <button type="submit" class=" cursor-pointer bg-red-600 py-3 rounded-lg w-full">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-2/5 w-full lg:flex lg:flex-row hidden">
+        <img src="./images/subscribe-banner.png" class="h-96" />
+      </div>
+      ']
+
+
+      <style>
+        .modal-Tshirt {
+          background-color: rgba(136, 136, 136, 0.221);
+          display: none;
+          position: absolute;
+          z-index: 1000;
+          margin-top: 530px;
+          padding-top: 100px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 600%;
+
+
+        }
+
+
+        .modal {
+          background-color: rgba(136, 136, 136, 0.221);
+          display: none;
+          position: absolute;
+          z-index: 1000;
+          margin-top: 530px;
+          padding-top: 100px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 600%;
+
+
+
+        }
+
+        .modal2 {
+          background-color: rgba(136, 136, 136, 0.221);
+          display: none;
+          position: absolute;
+          z-index: 1000;
+          margin-top: 1200px;
+          padding-top: 100px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 600%;
+
+
+
+        }
+
+        .modal-content {
+          background-color: #fefefe;
+          box-shadow: 2px 5px #0987c15f;
+          border-bottom-right-radius: #888888;
+          margin: 15% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 70%;
+          height: 10%;
+        }
+
+        .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      </style>
+      <!-- Modal logic -->
+      <script>
+        // var myModalTshirt = document.getElementById("myModal-Tshirt")
+        // var modal2 = document.getElementById("myModal8")
+
+
+
+        // var btn4 = document.getElementById("myBtn4");
+        // var btn5 = document.getElementById("myBtn5");
+        // var btn6 = document.getElementById("myBtn6");
+        // var btn7 = document.getElementById("myBtn7");
+        // var btn8 = document.getElementById("myBtn8");
+
+
+        // btn8.onclick = function () {
+        //   modal2.style.display = "block"
+        // }
+        // btn7.onclick = function () {
+        //   modal2.style.display = "block"
+        // }
+        // btn6.onclick = function () {
+        //   modal2.style.display = "block"
+        // }
+        // btn5.onclick = function () {
+        //   modal2.style.display = "block"
+        // }
+
+
+
+
+
+
+        // btn4.onclick = function () {
+        //   modal.style.display = "block"
+        // }
+        // btn3.onclick = function () {
+        //   modal.style.display = "block"
+        // }
+
+
+        //slim cut pants
+        // var  slimCutmodal = document.getElementById("myslimCutmodal")
+        // var btn2 = document.getElementById("myBtn2");    
+        // btn2.onclick = function () {
+        //           slimCutmodal.style.display = "block"
+        //         }
+
+      
+
+        // <div id="myModal-SlimCutPants"
+        // class="modal-Tshirt flex bg-gradient-to-b flex-none absolute z-50 mt-96 pt-96 left-0 top-0 w-96 h-64">
+
+        // <div class="modal-content-SlimCutPants bg-red-50 shadow-md rounded-r-md mt-auto p-20 border-solid border-2">
+        //   <span class="close">&times</span>
+
+
+      //  AirForce Ship
+        var myAirForceShoes = document.getElementById("myModal-AirForceShoes")
+        var btn3 = document.getElementById("myBtn3");
+        btn3.onclick = function(){
+        myAirForceShoes.style.display = "block"
+}
+
+
+
+      // Slim cut jeans modal logic
+        var myModalSlimCutPants = document.getElementById("myModal-SlimCutPants")
+        var btn2 = document.getElementById("myBtn2")
+        btn2.onclick = function(){
+          myModalSlimCutPants.style.display = "block"
+        }
+
+        //t-shirt modal logic
+        var myModalTshirt = document.getElementById("myModal-Tshirt")
+        var btn = document.getElementById("myBtn");
+        btn.onclick = function () {
+          myModalTshirt.style.display = "block"
+        }
+
+        // Smart Watch Modal Logic
+        var mySmartWatch = document.getElementById("myModal-SmartWatch")
+        var btn4 = document.getElementById("myBtn4");
+        btn4.onclick = function () {
+          mySmartWatch.style.display = "block"
+        }
+
+        // V Dress Modal Logic
+        var myVdress = document.getElementById("myModal-Vdress")
+        var btn5 = document.getElementById("myBtn5");
+        btn5.onclick = function () {
+          myVdress.style.display = "block"
+        }
+
+        // Wrapped Shoes Modal Logic
+        var myWrappedShoes = document.getElementById("myModal-myWrappedShoes")
+        var btn6 = document.getElementById("myBtn6");
+        btn6.onclick = function () {
+          myWrappedShoes.style.display = "block"
+        }
+
+        // Blue Denuim Dress Logic
+        var myBlueDenuim = document.getElementById("myModal-myBlueDenuim")
+        var btn7 = document.getElementById("myBtn7");
+        btn7.onclick = function () {
+          myBlueDenuim.style.display = "block"
+        }
+
+        // Low Printed Dress Logic
+        var myLowPrintedDress = document.getElementById("lowPrintedDress")
+        var btn8 = document.getElementById("myBtn8");
+        btn8.onclick = function () {
+          myLowPrintedDress.style.display = "block"
+        }
+
+
+        //window modal exit       
+        window.onclick = function (event) {
+          if (event.target == myModalTshirt) {
+            myModalTshirt.style.display = "none"
+          }
+          if (event.target == myModalSlimCutPants) {
+            myModalSlimCutPants.style.display = "none"
+          }
+          if(event.target == myAirForceShoes){
+            myAirForceShoes.style.display = "none"
+
+            if(event.target == mySmartWatch ){
+              mySmartWatch.style.display = "none"
+            }
+            if(event.target == myVdress){
+              myVdress.style.display == "none"
+            }
+            if(event.target == myWrappedShoes ){
+              myWrappedShoes.style.display == "none"
+            }
+            if(event.target == myBlueDenuim ){
+              myBlueDenuim.style.display == "none"
+            }
+            if(event.target == myLowPrintedDress){
+              myLowPrintedDress.style.display == "none"
+            }
+          }}
+
+        //multiple span modal exit. 
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+          myModalTshirt.style.display = "none"
+        
+        }
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+   
+          myModalSlimCutPants.style.display = "none"
+        }
+
+      </script>
+      <script src="cart.js">
+      </script>
+
+    </div><!-- Newsletter Section -->
+
+    <div class="border-t-2 border-gray-300 flex flex-col md:flex-row md:justify-between text-center py-5 text-sm">
+      <div class="mb-4">
+        <a href="#" class="mx-2.5">About</a>
+        <a href="#" class="mx-2.5">Privacy Policy</a>
+        <a href="#" class="mx-2.5">Terms of Services</a>
+      </div>
+
+      <p>&copy; Copyright Reserved 2022</p>
+    </div><!-- Footer Section -->
+  </div>
+</body>
+
+</html>
+
+
+
+
